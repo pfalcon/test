@@ -111,7 +111,8 @@ def cat_file(mode, sha1_prefix):
         if obj_type != mode:
             raise ValueError('expected object type {}, got {}'.format(
                     mode, obj_type))
-        sys.stdout.buffer.write(data)
+        #sys.stdout.buffer.write(data)
+        sys.stdout.write(data)
     elif mode == 'size':
         print(len(data))
     elif mode == 'type':
